@@ -20,8 +20,38 @@
   "deployment_status": {
     "github_pushed": true,
     "github_repo": "https://github.com/devChuong/devchuong.io.vn",
-    "vercel_connected": "PENDING_AUTH_OR_DASHBOARD_IMPORT",
-    "cloudflare_dns": "PENDING_RECORD_ADDITION"
+    "vercel_connected": true,
+    "vercel_project_id": "prj_A4xQOaHBRw7b0D1X7kyFuXtn8y3t",
+    "vercel_project_name": "landing-page-devchuong",
+    "vercel_deployment_url": "https://landing-page-devchuong.vercel.app",
+    "vercel_deployment_status": "READY",
+    "domains": [
+      {
+        "name": "devchuong.io.vn",
+        "verified": true,
+        "type": "apex"
+      },
+      {
+        "name": "www.devchuong.io.vn",
+        "verified": true,
+        "type": "redirect",
+        "target": "devchuong.io.vn"
+      }
+    ],
+    "cloudflare_dns_records": [
+      {
+        "type": "A",
+        "name": "@",
+        "content": "76.76.21.21",
+        "proxy": true
+      },
+      {
+        "type": "CNAME",
+        "name": "www",
+        "content": "cname.vercel-dns.com",
+        "proxy": true
+      }
+    ]
   },
-  "last_updated": "2026-11-21T19:39:00+07:00"
+  "last_updated": "2026-11-21T19:42:30+07:00"
 }

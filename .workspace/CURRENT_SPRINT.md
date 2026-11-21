@@ -1,4 +1,4 @@
-# CURRENT SPRINT: SPRINT 1 - FOUNDATION & CORE ECOSYSTEM HUB (COMPLETED)
+# CURRENT SPRINT: SPRINT 1 - FOUNDATION & CORE ECOSYSTEM HUB (DEPLOYED)
 
 ## 1. Sprint Goal
 Triển khai Landing Page & Central Portal Hub hoàn chỉnh cho tên miền `devchuong.io.vn`, tích hợp thiết kế chuẩn thương mại từ Google Stitch MCP, đảm bảo mô hình Decoupled Architecture, Uptime 99.9%, $0 base cost và tối ưu cho hồ sơ năng lực / tuyển dụng.
@@ -6,13 +6,11 @@ Triển khai Landing Page & Central Portal Hub hoàn chỉnh cho tên miền `de
 ## 2. Tasks Status
 - [x] **TASK-01: Google Stitch MCP Architecture & Design Tokens**: Khởi tạo project `8043355730025899365` trên Stitch, sinh giao diện `Obsidian Telemetry` (`f5a407f984da48ea95bf92162adc3d33`) và trích xuất design tokens.
 - [x] **TASK-02: Scaffolding & Workspace Governance**: Khởi tạo Git repo, cấu hình `.workspace/` (`AI_STATE.json`, `CURRENT_SPRINT.md`, `ROADMAP.md`).
-- [x] **TASK-03: Component Architecture & Data Model**:
-  - `Navbar`: DevChuong Studio brand, 99.9% uptime beacon, navigation anchors, CV download, Direct Connect.
-  - `Hero`: Executive headline, telemetry stats bar (99.98% Uptime, < 42ms Latency, Decoupled, $0 Base).
-  - `AppHub`: 4 Live application cards (Chitieu App, EAMS Asset Management, Pinyin Tones Pro, AI Labs).
-  - `ArchitectureShowcase`: Hệ thống sơ đồ 3 tầng (Cloudflare Edge -> Host Dispatcher -> Isolated Subdomain Runtimes).
-  - `CaseStudies`: 3 bài toán kiến trúc thực tế (Multi-domain decoupling, Offline-first sync, Enterprise asset audit).
-  - `TechMatrix`: Ma trận kỹ năng 4 mảng công nghệ (Frontend, Backend, Cloud/DevOps, AI/Agentic).
-  - `ContactSection & Footer`: Kênh liên hệ `devchuong@gmail.com`, GitHub `devChuong`, form gửi inquiry.
-- [x] **TASK-04: Static Build Verification & Performance QA**: Kiểm tra `npm run build` thành công trong 1.08s, tổng bundle gzip < 70KB, 0 warning/error.
-- [x] **TASK-05: Git Commit & Memory Freeze**: Cập nhật AI_STATE và commit vào Git repository.
+- [x] **TASK-03: Component Architecture & Data Model**: Hoàn thiện toàn bộ các components (`Navbar`, `Hero`, `AppHub`, `ArchitectureShowcase`, `CaseStudies`, `TechMatrix`, `ContactSection`, `Footer`).
+- [x] **TASK-04: Static Build Verification & Performance QA**: Build thành công trong 1.08s, bundle gzip < 70KB, 0 warning/error.
+- [x] **TASK-05: GitHub Repository Synchronization**: Đã tạo và push mã nguồn lên repo `devChuong/devchuong.io.vn` (nhánh `main`).
+- [x] **TASK-06: Vercel Project Linking & Production Deployment**:
+  - Project `landing-page-devchuong` (`prj_A4xQOaHBRw7b0D1X7kyFuXtn8y3t`) đã được tạo và kích hoạt CI/CD tự động từ GitHub.
+  - Deployment `dpl_HktmSoDaGf7R1sPATvZeqeGoBx9d` trạng thái `READY` (HTTP 200).
+  - Đã liên kết và xác minh thành công 2 domain: `devchuong.io.vn` và `www.devchuong.io.vn`.
+- [/] **TASK-07: Cloudflare DNS Configuration**: Thêm 2 bản ghi A & CNAME (Proxied 🟧) trên Cloudflare Dashboard để kết nối chính thức root domain.
