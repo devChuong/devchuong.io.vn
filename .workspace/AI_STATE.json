@@ -4,6 +4,7 @@
   "email": "devchuong@gmail.com",
   "github": "devChuong",
   "domain": "devchuong.io.vn",
+  "repository": "https://github.com/devChuong/devchuong.io.vn",
   "version": "v1.0.0",
   "infrastructure": {
     "hosting": "Vercel Static / Edge CDN",
@@ -16,14 +17,11 @@
     "title": "DevChuong Studio - devchuong.io.vn Portal & Career Hub",
     "design_system": "Obsidian Telemetry (assets/c1d9a0b6237e49928bcad17bda4b9a7d)"
   },
-  "current_sprint": "Sprint 1",
-  "status": "COMPLETED_AND_FROZEN",
-  "build_metrics": {
-    "bundle_js_gzip": "61.56 kB",
-    "bundle_css_gzip": "5.08 kB",
-    "html_gzip": "1.41 kB",
-    "total_bundle_gzip": "< 70 kB",
-    "build_time": "1.08s"
+  "deployment_status": {
+    "github_pushed": true,
+    "github_repo": "https://github.com/devChuong/devchuong.io.vn",
+    "vercel_connected": "PENDING_AUTH_OR_DASHBOARD_IMPORT",
+    "cloudflare_dns": "PENDING_RECORD_ADDITION"
   },
-  "last_updated": "2026-11-21T19:25:00+07:00"
+  "last_updated": "2026-11-21T19:39:00+07:00"
 }
