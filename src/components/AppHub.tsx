@@ -29,11 +29,11 @@ export const AppHub: React.FC = () => {
         {/* Global Cluster Status */}
         <div className="flex items-center gap-2 font-mono text-xs text-slate-300 bg-slate-900/90 border border-slate-800 px-3.5 py-2 rounded-xl self-start">
           <span className="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
-          <span>TẤT CẢ DỊCH VỤ HOẠT ĐỘNG BÌNH THƯỜNG (4/4)</span>
+          <span>TẤT CẢ DỊCH VỤ HOẠT ĐỘNG BÌNH THƯỜNG (5/5 SẴN SÀNG)</span>
         </div>
       </div>
 
-      {/* 4 Featured Application Cards Grid (2x2) */}
+      {/* Featured Application Cards Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {APPS_DATA.map((app) => {
           const isGreen = app.statusColor === 'secondary';
@@ -53,7 +53,9 @@ export const AppHub: React.FC = () => {
           return (
             <div
               key={app.id}
-              className="group relative rounded-2xl glass-panel p-6 sm:p-7 flex flex-col justify-between gap-6 shadow-xl glass-panel-hover"
+              className={`group relative rounded-2xl glass-panel p-6 sm:p-7 flex flex-col justify-between gap-6 shadow-xl glass-panel-hover ${
+                app.featured ? 'lg:col-span-2' : ''
+              }`}
             >
               <div className="flex flex-col gap-4">
                 {/* Top Row Status & Domain */}

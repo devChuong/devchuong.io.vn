@@ -14,6 +14,7 @@ export interface AppItem {
   ctaText: string;
   metricsText: string;
   isExternal: boolean;
+  featured?: boolean;
 }
 
 export const APPS_DATA: AppItem[] = [
@@ -54,6 +55,24 @@ export const APPS_DATA: AppItem[] = [
     isExternal: true
   },
   {
+    id: 'mac-cleaner',
+    name: 'Mac Disk Cleaner Pro 🍏',
+    subdomain: 'Tiện ích macOS Portable',
+    url: 'https://github.com/devChuong',
+    status: 'AVAILABLE / DESKTOP',
+    statusColor: 'secondary',
+    frameworkBadge: 'PYTHON 3 + APFS ENGINE',
+    description: 'Ứng dụng dọn dẹp và tối ưu dung lượng ổ cứng an toàn dành cho MacBook. Thiết kế Zero-dependency không cần cài đặt, đo đạc phân vùng APFS thời gian thực, dọn sạch rác Developer Caches (NPM, Brew, Pip, Crash logs) an toàn tuyệt đối cho dữ liệu cá nhân.',
+    features: [
+      { label: 'Zero-Dependency', value: 'Chạy trực tiếp native macOS' },
+      { label: 'APFS Realtime', value: 'Đo dung lượng chuẩn xác' },
+      { label: 'Safe Clean', value: 'Bảo vệ dữ liệu & mật khẩu' }
+    ],
+    ctaText: 'Xem tài liệu & Bộ cài Portable',
+    metricsText: 'PORTABLE 1-CLICK • ZERO MEMORY FOOTPRINT',
+    isExternal: true
+  },
+  {
     id: 'pinyin-tones',
     name: 'Pinyin Tones Pro',
     subdomain: 'Tiện ích macOS & Web',
@@ -87,6 +106,7 @@ export const APPS_DATA: AppItem[] = [
     ],
     ctaText: 'Xem Lộ trình & Nghiên cứu',
     metricsText: 'AGENTIC TOOLING EXPERIMENTS',
-    isExternal: false
+    isExternal: false,
+    featured: true
   }
 ];

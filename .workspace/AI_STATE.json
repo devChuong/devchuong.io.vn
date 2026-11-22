@@ -5,10 +5,10 @@
   "github": "devChuong",
   "domain": "devchuong.io.vn",
   "repository": "https://github.com/devChuong/devchuong.io.vn",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "infrastructure": {
     "hosting": "Vercel Static / Edge CDN",
-    "dns_proxy": "Cloudflare Edge (Proxied, WAF, SSL Strict, TLS 1.3)",
+    "dns_proxy": "Cloudflare Edge (Flexible SSL Mode, WAF, TLS 1.3)",
     "architecture": "Decoupled Subdomain Micro-Frontends"
   },
   "stitch_project": {
@@ -17,41 +17,20 @@
     "title": "DevChuong Studio - devchuong.io.vn Portal & Career Hub",
     "design_system": "Obsidian Telemetry (assets/c1d9a0b6237e49928bcad17bda4b9a7d)"
   },
+  "ecosystem_products": [
+    "chitieu (Next.js 15 PWA)",
+    "eams (React 19 Enterprise)",
+    "mac-cleaner (Mac Disk Cleaner Pro - Python 3 + APFS)",
+    "pinyin-tones (Pinyin Tones Pro - Swift + WASM)",
+    "ai-labs (AI Automation Labs & MCP)"
+  ],
   "deployment_status": {
     "github_pushed": true,
     "github_repo": "https://github.com/devChuong/devchuong.io.vn",
     "vercel_connected": true,
-    "vercel_project_id": "prj_A4xQOaHBRw7b0D1X7kyFuXtn8y3t",
-    "vercel_project_name": "landing-page-devchuong",
     "vercel_deployment_url": "https://landing-page-devchuong.vercel.app",
-    "vercel_deployment_status": "READY",
-    "domains": [
-      {
-        "name": "devchuong.io.vn",
-        "verified": true,
-        "type": "apex"
-      },
-      {
-        "name": "www.devchuong.io.vn",
-        "verified": true,
-        "type": "redirect",
-        "target": "devchuong.io.vn"
-      }
-    ],
-    "cloudflare_dns_records": [
-      {
-        "type": "A",
-        "name": "@",
-        "content": "76.76.21.21",
-        "proxy": true
-      },
-      {
-        "type": "CNAME",
-        "name": "www",
-        "content": "cname.vercel-dns.com",
-        "proxy": true
-      }
-    ]
+    "domain_status": "LIVE_AND_SECURE",
+    "ssl_mode": "Flexible (Cloudflare SSL Active)"
   },
-  "last_updated": "2026-11-21T19:42:30+07:00"
+  "last_updated": "2026-11-22T15:26:00+07:00"
 }

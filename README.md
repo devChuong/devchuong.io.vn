@@ -48,6 +48,7 @@ Trang chủ **`devchuong.io.vn`** đóng vai trò là **Trạm trung chuyển t�
 |---|---|---|---|
 | **Quản Lý Chi Tiêu (Chitieu App)** | `chitieu.devchuong.io.vn` | Next.js 15, IndexedDB, Tailwind | `ONLINE / PRODUCTION` |
 | **EAMS Thiết Bị & Vật Tư** | `eams.devchuong.io.vn` | React 19, TypeScript, PostgreSQL | `ONLINE / ENTERPRISE` |
+| **Mac Disk Cleaner Pro 🍏** | Native macOS Portable Utility | Python 3, APFS Engine, Shell | `AVAILABLE / DESKTOP` |
 | **Pinyin Tones Pro** | Native macOS / Web Utility | Swift, WASM, Desktop Daemon | `AVAILABLE / DESKTOP` |
 | **AI Automation Labs** | `ai.devchuong.io.vn` | Python, MCP Servers, LangGraph | `IN ACTIVE DEV` |
 
