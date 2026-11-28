@@ -1,6 +1,7 @@
 import React from 'react';
-import { Terminal, Mail, MapPin } from 'lucide-react';
+import { Terminal, Mail, MapPin, PhoneCall } from 'lucide-react';
 import { PROFILE } from '../data/profile';
+import { ZaloIcon, WhatsAppIcon } from './icons/ContactIcons';
 
 export const Footer: React.FC = () => {
   return (
@@ -57,30 +58,92 @@ export const Footer: React.FC = () => {
             </a>
           </div>
 
-          {/* Col 4: Direct Protocols */}
-          <div className="flex flex-col gap-2.5 font-mono text-xs">
-            <span className="font-bold uppercase text-slate-500 tracking-wider text-[11px] mb-1">
-              Kênh Liên Lạc
-            </span>
+          {/* Col 4: Direct Protocols & Hotline */}
+          <div className="flex flex-col gap-3 font-mono text-xs">
+            <div className="flex items-center justify-between">
+              <span className="font-bold uppercase text-slate-500 tracking-wider text-[11px]">
+                Kênh Liên Lạc & Hotline
+              </span>
+              <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                </span>
+                <span className="text-[10px] text-emerald-400 font-semibold">LIVE</span>
+              </div>
+            </div>
+
+            {/* Direct Phone Call Button */}
             <a
-              href={`mailto:${PROFILE.email}`}
-              className="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
+              href={`tel:${PROFILE.phone}`}
+              className="group p-2.5 rounded-xl bg-gradient-to-r from-emerald-500/10 to-teal-500/5 border border-emerald-500/30 hover:border-emerald-400/70 hover:shadow-glow-secondary transition-all flex items-center justify-between"
+              title="Gọi điện thoại trực tiếp cho Trần Văn Chương"
             >
-              <Mail className="w-3.5 h-3.5 text-primary" />
-              <span>{PROFILE.email}</span>
+              <div className="flex items-center gap-2.5">
+                <div className="relative flex items-center justify-center w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 group-hover:scale-105 transition-transform">
+                  <PhoneCall className="w-3.5 h-3.5 animate-pulse" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-bold uppercase text-emerald-400/90 tracking-wider">
+                    Điện thoại trực tiếp
+                  </span>
+                  <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors">
+                    {PROFILE.phoneDisplay}
+                  </span>
+                </div>
+              </div>
+              <span className="text-[10px] text-emerald-400 font-bold uppercase px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
+                Gọi ngay
+              </span>
             </a>
-            <a
-              href={PROFILE.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
-            >
-              <Terminal className="w-3.5 h-3.5 text-secondary" />
-              <span>github.com/devChuong</span>
-            </a>
-            <div className="text-slate-400 flex items-center gap-2 text-[11px]">
-              <MapPin className="w-3.5 h-3.5 text-purple-400" />
-              <span>Việt Nam // Remote Toàn cầu</span>
+
+            {/* Quick OTT Chat: Zalo & WhatsApp */}
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={PROFILE.zalo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-2.5 py-2 rounded-xl bg-blue-500/10 border border-blue-500/30 hover:border-blue-400 hover:bg-blue-500/20 text-blue-300 transition-all text-xs group"
+                title="Chat trực tiếp qua Zalo"
+              >
+                <ZaloIcon className="w-4 h-4 rounded-md" />
+                <span className="font-semibold text-[11px] group-hover:text-white">Zalo Chat</span>
+              </a>
+
+              <a
+                href={PROFILE.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-2.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 hover:border-emerald-400 hover:bg-emerald-500/20 text-emerald-300 transition-all text-xs group"
+                title="Chat trực tiếp qua WhatsApp"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
+                <span className="font-semibold text-[11px] group-hover:text-white">WhatsApp</span>
+              </a>
+            </div>
+
+            {/* Standard Channels: Email, GitHub, Location */}
+            <div className="flex flex-col gap-2 pt-1 border-t border-slate-800/60">
+              <a
+                href={`mailto:${PROFILE.email}`}
+                className="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
+              >
+                <Mail className="w-3.5 h-3.5 text-primary" />
+                <span>{PROFILE.email}</span>
+              </a>
+              <a
+                href={PROFILE.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
+              >
+                <Terminal className="w-3.5 h-3.5 text-secondary" />
+                <span>github.com/devChuong</span>
+              </a>
+              <div className="text-slate-400 flex items-center gap-2 text-[11px]">
+                <MapPin className="w-3.5 h-3.5 text-purple-400" />
+                <span>Việt Nam // Remote Toàn cầu</span>
+              </div>
             </div>
           </div>
         </div>

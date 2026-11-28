@@ -12,3 +12,4 @@ Triển khai Landing Page & Central Portal Hub hoàn chỉnh cho tên miền `de
 - [x] **TASK-06: Vercel Project Linking & Production Deployment**: Project `landing-page-devchuong` kích hoạt thành công.
 - [x] **TASK-07: Cloudflare DNS & Flexible SSL**: Kết nối domain `devchuong.io.vn` và `www.devchuong.io.vn` qua Cloudflare Edge Proxy, bảo mật HTTPS thành công.
 - [x] **TASK-08: Add Mac Disk Cleaner Pro**: Bổ sung sản phẩm Native Desktop "Mac Disk Cleaner Pro 🍏" vào Hệ sinh thái sản phẩm cốt lõi (5/5 nodes).
+- [x] **TASK-09: Live Hotline Beacon, Direct Calling, Zalo & WhatsApp Integration**: Bổ sung số điện thoại `+84914999783` (hiển thị `0914.999.783`), hiệu ứng beacon live radar pulse, nút gọi điện thoại nhanh `tel:`, nút chat Zalo và WhatsApp vào Footer và ContactSection.

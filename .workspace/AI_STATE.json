@@ -5,7 +5,11 @@
   "github": "devChuong",
   "domain": "devchuong.io.vn",
   "repository": "https://github.com/devChuong/devchuong.io.vn",
-  "version": "v1.1.0",
+  "version": "v1.2.0",
+  "phone": "+84914999783",
+  "phone_display": "0914.999.783",
+  "zalo": "https://zalo.me/0914999783",
+  "whatsapp": "https://wa.me/84914999783",
   "infrastructure": {
     "hosting": "Vercel Static / Edge CDN",
     "dns_proxy": "Cloudflare Edge (Flexible SSL Mode, WAF, TLS 1.3)",
@@ -32,5 +36,5 @@
     "domain_status": "LIVE_AND_SECURE",
     "ssl_mode": "Flexible (Cloudflare SSL Active)"
   },
-  "last_updated": "2026-11-22T15:26:00+07:00"
+  "last_updated": "2026-11-28T17:55:00+07:00"
 }

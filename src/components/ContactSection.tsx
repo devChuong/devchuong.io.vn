@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Check, Copy, Terminal, Send, ArrowUpRight, Globe, CheckCircle2 } from 'lucide-react';
+import { Mail, Check, Copy, Terminal, Send, ArrowUpRight, Globe, CheckCircle2, PhoneCall } from 'lucide-react';
 import { PROFILE } from '../data/profile';
+import { ZaloIcon, WhatsAppIcon } from './icons/ContactIcons';
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -50,6 +51,61 @@ export const ContactSection: React.FC = () => {
 
           {/* Direct Contact Badges */}
           <div className="flex flex-col gap-3 pt-2">
+            {/* Phone Hotline Live Row */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-gradient-to-r from-emerald-500/10 via-[#08090d]/90 to-teal-500/5 border border-emerald-500/30 gap-3">
+              <div className="flex items-center gap-3">
+                <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shrink-0">
+                  <PhoneCall className="w-4 h-4 animate-pulse" />
+                </div>
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-mono text-[10px] uppercase font-bold text-emerald-400">
+                      Hotline Trực Tiếp
+                    </span>
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                    </span>
+                  </div>
+                  <span className="font-mono text-xs sm:text-sm text-white font-bold">
+                    {PROFILE.phoneDisplay}
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 flex-wrap">
+                <a
+                  href={PROFILE.zalo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs text-blue-300 hover:text-white px-2.5 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/30 hover:border-blue-400 hover:bg-blue-500/20 transition-all flex items-center gap-1.5"
+                  title="Nhắn tin qua Zalo"
+                >
+                  <ZaloIcon className="w-3.5 h-3.5" />
+                  <span>Zalo</span>
+                </a>
+
+                <a
+                  href={PROFILE.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs text-emerald-300 hover:text-white px-2.5 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 hover:border-emerald-400 hover:bg-emerald-500/20 transition-all flex items-center gap-1.5"
+                  title="Nhắn tin qua WhatsApp"
+                >
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>WhatsApp</span>
+                </a>
+
+                <a
+                  href={`tel:${PROFILE.phone}`}
+                  className="font-mono text-xs text-slate-950 font-bold px-3 py-1.5 rounded-lg bg-emerald-400 hover:bg-emerald-300 transition-all flex items-center gap-1 shadow-glow-secondary"
+                  title="Gọi ngay"
+                >
+                  <span>Gọi ngay</span>
+                </a>
+              </div>
+            </div>
+
             {/* Email Copy Row */}
             <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#08090d]/90 border border-slate-800">
               <div className="flex items-center gap-3">
